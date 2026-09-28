@@ -27,3 +27,12 @@ class Document:
     embedding: list[float] = field(default_factory=list)
     metadata: dict = field(default_factory=dict)
     label: str | None = None
+
+    @property
+    def is_labeled(self) -> bool:
+        return self.label is not None
+
+    def preview(self, n: int = 60) -> str:
+        """Cat gon text de in log/debug cho de nhin."""
+        one_line = " ".join(self.text.split())
+        return one_line if len(one_line) <= n else one_line[: n - 1] + "…"
