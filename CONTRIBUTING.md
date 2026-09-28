@@ -24,9 +24,6 @@ File này để cả nhóm làm việc trên cùng repo mà không dẫm chân n
   - `test: bo sung test cho repository factory`
   - `fix: sua loi doc config khi thieu key`
 
-> Lưu ý: KHÔNG để công cụ AI làm committer/author. Author luôn là thành viên thật của nhóm.
-> Giảng viên sẽ xem lịch sử commit để biết ai làm gì, nên commit đúng tên mình.
-
 ## 3. Trước khi push
 
 Chạy đủ 3 bước, đỏ chỗ nào sửa chỗ đó rồi mới push:
