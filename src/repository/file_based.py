@@ -34,9 +34,7 @@ class FileKnowledgeRepository(KnowledgeRepository):
 
     def _flush(self) -> None:
         raw = {doc_id: asdict(doc) for doc_id, doc in self._store.items()}
-        self._file.write_text(
-            json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8"
-        )
+        self._file.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8")
 
     def add(self, document: Document) -> None:
         self._store[document.doc_id] = document
